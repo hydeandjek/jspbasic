@@ -18,12 +18,22 @@
   
   <servlet>
   	<servlet-name>basic</servlet-name>
-  	<servlet-class>com.jsp.servlet.Servlet</servlet-class>
+  	<servlet-class>com.jsp.servlet.ServletBasic</servlet-class>
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>basic</servlet-name>
   	<url-pattern>/basic</url-pattern>
   </servlet-mapping>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/Exception/erro_404.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<exception-type>java.lang.NullPointerException</exception-type>
+  	<location>/Exception/error_null.jsp</location>
+  </error-page>
   	
 </web-app>
